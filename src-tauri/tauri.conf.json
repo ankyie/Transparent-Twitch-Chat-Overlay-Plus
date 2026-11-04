@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "TTCO Plus",
+  "mainBinaryName": "ttco-plus",
+  "version": "1.0.0",
+  "identifier": "com.ttcoplus.overlay",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [],
+    "security": {
+      "csp": {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "font-src": "'self' data: https://fonts.gstatic.com",
+        "img-src": "'self' data: blob: https:",
+        "media-src": "'self' data: blob: https:",
+        "connect-src": "'self' ipc: http://ipc.localhost wss://irc-ws.chat.twitch.tv https://recent-messages.robotty.de https://api.ivr.fi https://7tv.io https://api.betterttv.net https://api.frankerfacez.com",
+        "frame-src": "'self' https: http:",
+        "object-src": "'none'",
+        "base-uri": "'self'",
+        "form-action": "'none'"
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "publisher": "TTCO Plus contributors",
+    "copyright": "Copyright (C) 2026 TTCO Plus contributors. Licensed under GPL-3.0-or-later.",
+    "category": "Utility",
+    "shortDescription": "Transparent Twitch chat overlay for games",
+    "longDescription": "Shows Twitch chat (or any web widget) on top of borderless / windowed games, with click-through, fade on hover or on a hotkey, multiple overlays, layouts and a modern manager.",
+    "licenseFile": "../LICENSE",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": { "type": "downloadBootstrapper" },
+      "nsis": {
+        "installMode": "both",
+        "installerIcon": "icons/icon.ico",
+        "startMenuFolder": "TTCO Plus",
+        "installerHooks": "installer-hooks.nsh"
+      }
+    }
+  }
+}

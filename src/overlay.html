@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TTCO+ overlay</title>
+  <link rel="stylesheet" href="overlay.css" />
+  <style id="custom-css"></style>
+</head>
+<body>
+  <div id="frame">
+    <div id="content">
+      <div id="chat" aria-live="polite"></div>
+      <div id="empty" hidden></div>
+    </div>
+
+    <div id="bar">
+      <svg class="grip" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h.01M8 12h.01M8 18h.01M16 6h.01M16 12h.01M16 18h.01" /></svg>
+      <span id="bar-name">Overlay</span>
+      <span id="bar-status" class="status"></span>
+      <span class="spacer"></span>
+      <button data-act="settings" title="Open settings">
+        <svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+      </button>
+      <button data-act="hide" title="Hide this overlay (keeps it in the manager)">
+        <svg viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><path d="m1 1 22 22"/></svg>
+      </button>
+      <button data-act="lock" class="primary" title="Lock (click-through)">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Lock</span>
+      </button>
+    </div>
+
+    <div class="rz" data-dir="North"></div>
+    <div class="rz" data-dir="South"></div>
+    <div class="rz" data-dir="East"></div>
+    <div class="rz" data-dir="West"></div>
+    <div class="rz" data-dir="NorthWest"></div>
+    <div class="rz" data-dir="NorthEast"></div>
+    <div class="rz" data-dir="SouthWest"></div>
+    <div class="rz" data-dir="SouthEast"></div>
+    <div id="size-hint"></div>
+  </div>
+  <div id="toast"></div>
+  <script type="module" src="overlay.js"></script>
+</body>
+</html>

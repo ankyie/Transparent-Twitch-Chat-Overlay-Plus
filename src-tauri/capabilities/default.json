@@ -1,0 +1,15 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissions for the manager and overlay windows",
+  "windows": ["manager", "overlay-*"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-start-dragging",
+    "core:window:allow-start-resize-dragging",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:event:allow-emit",
+    "core:event:allow-emit-to"
+  ]
+}
